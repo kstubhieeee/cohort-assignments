@@ -4,7 +4,19 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  let string = str.toLowerCase();
+  let newString = "";
+  for (i = string.length - 1; i >= 0; i--) {
+    newString = newString + string[i];
+  }
+  if (string == newString) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+let boolean = isPalindrome("noon");
+console.log(boolean);
 
 module.exports = isPalindrome;

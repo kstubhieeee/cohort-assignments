@@ -9,5 +9,17 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
-    return 0.01;
+  const start = performance.now();
+  let counter = 0;
+  for (let i = 1; i <= n; i++) {
+    counter = counter + i;
+  }
+  return (performance.now() - start) / 1000;
 }
+
+let diff1 = calculateTime(100);
+let diff2 = calculateTime(100000);
+let diff3 = calculateTime(1000000000);
+console.log(diff1 + "s");
+console.log(diff2 + "s");
+console.log(diff3 + "s");
